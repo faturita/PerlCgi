@@ -1,0 +1,126 @@
+<html>
+
+<head>
+<meta generator="Adobe pascal 1.32">
+<title>Subscripciones al Mundo KICHI</title>
+
+<script language="javascript">
+function cancelenvio(formu)
+	{
+	var incorrect=false
+	// Controlar el checkbox //
+	if (formu.boletin.checked)
+		formu.boletin.value='si';
+	   else
+		formu.boletin.value='no';	
+
+	// Controlar el rellenado de los campos obligatorios //
+	if ((formu.nombre.value=="") || (formu.apellido.value=="")) 
+		{
+		incorrect=true;
+		alert("Debe llenar los campos de nombre y apellido.")
+		formu.nombre.focus();
+		}
+	if (formu.email.value=="")
+		{
+		incorrect=true;
+		alert("KichiProblema: Debe llenar el campo del email!")
+		formu.email.focus();
+		}
+	if ((formu.user.value=="") || (formu.clave.value==""))
+		{
+		incorrect=true;
+		alert("El nombre de usuario y la contraseña no son válidos.");
+		formu.user.focus();
+		}
+	return incorrect;
+	}
+
+</script>		
+
+</head>
+
+<body background="imagenes/fondo03.gif">
+<center>
+<h1>
+<font color="teal">
+Suscribase al mundo kichi ya!
+</font>
+</h1>
+
+<h2>
+Obtenga todos los beneficios de formar parte de este nuevo site, que intenta ser diferente a todo lo conocido....
+</h2>
+</center>
+
+<font color="red">
+Solo tiene que completar los datos del formulario, y a los pocos días recibirá una contestación via email, donde 
+se le dirá que ya forma parte del KICHIWORLD, y podrá acceder a todos los beneficios que ofrecemos....
+<br>
+No lo dude....Las buenas oportunidades solo se presentan una vez en la vida.  Y está es una buena oportunidad...
+<br>
+</font>
+<hr>
+
+<font color="teal" face="Frontier" size=6>
+<strong><u>Formulario de Inscripción</u></strong>
+</font>
+
+<form name="formulario" action="http://hammer.prohosting.com/cgi-bin/kichipage/addme.cgi" action=POST onSubmit="if (cancelenvio(this)) return false;">
+
+<pre>
+Nombre:  <input type="text" name="nombre">
+Apellido:<input type="text" name="apellido">
+<br><br>
+Email:   <input type="text" name="email">
+<br><br>
+Usuario: <input type="text" name="user">
+Clave:   <input type="password" name="clave">
+</pre>
+
+<hr size=20%>
+<font color="teal">
+<center>Datos complementarios.  (rellenado opcional)</center>
+</font>
+<br>
+
+<pre>
+<b><u>Información que le interesa
+</u></b>
+Futbol            <input type="radio" name="gusto" value="F">                           <input type="radio" name="gusto" value="L">Literatura
+Ciencia/Tecnología<input type="radio" name="gusto" value="C">				<input type="radio" name="gusto" value="N">Noticias
+<br><br>
+<b><u>Profile:</b></u><textarea align="MIDDLE" name="profile" cols=20 rows=4>Escriba aqui una breve descripción suya.</textarea>
+
+</pre>
+
+<hr size=20%>
+Desde KichiPage nosotros envíamos semanalmente un email a nuestros
+clientes, con noticias y novedades acerca de los tópicos afines para
+cada uno en particular.<br>
+<b><u>¿Desea recibir semanalmente este Boletín?</u></b>
+<font color="cyan">Si</font>
+<input type="checkbox" name="boletin" value="no"><br>
+
+<br><br><br>
+
+<center><input type="submit" value="Suscribirme!">
+</center>
+</form>
+<hr>
+<font face="Roman" color="blue" size=1>
+<center>
+La suscripción a el site Kichi queda estrictamente bajo responsabilidad del suscriptor,<br>
+quedando Kichi Corporation expresamente afuera de cualquier deuda económica o moral con<br>
+quien acepta este trato.  El hecho de suscribirse da crédito que usted acepta voluntariamente<br>
+los términos de este contrato.
+CopyRight(C) 2000 All rights reserved - Servidores Oel Amon Yag para KichiPage Corp.
+</center>
+</font>
+
+
+</body>
+
+</html>
+
+
